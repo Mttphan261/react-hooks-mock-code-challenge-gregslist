@@ -41,9 +41,15 @@ function App() {
     setSearch(e.target.value)
   }
 
+  //CB for adding listing for POST
+
+  function addListing(listing) {
+    SetListingsArray([...listingsArray, listing])
+  }
+
   return (
     <div className="app">
-      <Header handleSearch={handleSearch} search={search}/>
+      <Header handleSearch={handleSearch} search={search} addListing={addListing}/>
       <ListingsContainer listingsArray={searchedListings} deleteListing={deleteListing}/>
     </div>
   );

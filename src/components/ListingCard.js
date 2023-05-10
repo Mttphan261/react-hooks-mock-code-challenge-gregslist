@@ -12,7 +12,7 @@ function ListingCard({listing, deleteListing}) {
     fetch(`http://localhost:6001/listings/${listing.id}`, {
       method: 'DELETE',})
       .then((r) => r.json())
-      .then((data) => deleteListing(data))
+      .then(() => deleteListing(listing.id))
   }
 
   return (

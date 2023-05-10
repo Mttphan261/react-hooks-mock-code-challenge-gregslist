@@ -20,7 +20,7 @@ function App() {
   function deleteListing(listing) {
     SetListingsArray(
       [...listingsArray].filter((el) => {
-        if(el.id === listing.id) {
+        if(el.id === listing) {
           return false
         } else {
           return true

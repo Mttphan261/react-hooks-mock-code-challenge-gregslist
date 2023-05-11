@@ -6,7 +6,7 @@ function ListingsContainer({ listingsArray, deleteListing }) {
 
   const sortedListings = [...listingsArray].sort((a, b) => {
     if (alphaSort === true) {
-      return a.description.localeCompare(b.description);
+      return a.location.localeCompare(b.location);
     }
   });
 
@@ -27,7 +27,7 @@ function ListingsContainer({ listingsArray, deleteListing }) {
           setAlphaSort((prev) => !prev);
         }}
       >
-        {alphaSort ? 'Display Normal' : 'Display Alphabetically'}
+        {alphaSort ? 'Display Normal' : 'Display Alphabetically By Location'}
       </button>
       <ul className="cards">
         {/* use the ListingCard component to display listings */}
